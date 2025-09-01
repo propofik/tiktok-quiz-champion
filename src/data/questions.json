@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "text": "What is the name of the dimension accessed using an End Portal?",
+    "answer": "The End",
+    "aliases": ["End", "end", "the end"]
+  },
+  {
+    "id": 2,
+    "text": "Which tool is required to ignite a Nether Portal?",
+    "answer": "Flint and Steel",
+    "aliases": ["flint and steel", "flint & steel", "flint steel"]
+  },
+  {
+    "id": 3,
+    "text": "What is the hardest naturally occurring block in Minecraft?",
+    "answer": "Obsidian",
+    "aliases": ["obsidian"]
+  },
+  {
+    "id": 4,
+    "text": "Which mob drops Ender Pearls?",
+    "answer": "Enderman",
+    "aliases": ["enderman", "endermen"]
+  },
+  {
+    "id": 5,
+    "text": "What food item restores the most hunger points?",
+    "answer": "Golden Carrot",
+    "aliases": ["golden carrot", "gold carrot"]
+  },
+  {
+    "id": 6,
+    "text": "Which ore is needed to craft a compass?",
+    "answer": "Iron",
+    "aliases": ["iron", "iron ore"]
+  },
+  {
+    "id": 7,
+    "text": "What is the maximum level for the Sharpness enchantment?",
+    "answer": "5",
+    "aliases": ["five", "V"]
+  },
+  {
+    "id": 8,
+    "text": "Which block is immune to TNT explosions?",
+    "answer": "Bedrock",
+    "aliases": ["bedrock"]
+  },
+  {
+    "id": 9,
+    "text": "What potion effect does a Golden Apple give?",
+    "answer": "Absorption",
+    "aliases": ["absorption", "regeneration"]
+  },
+  {
+    "id": 10,
+    "text": "Which dimension is home to Blazes?",
+    "answer": "Nether",
+    "aliases": ["nether", "the nether"]
+  },
+  {
+    "id": 11,
+    "text": "What is the recipe ingredient for making cake?",
+    "answer": "Milk",
+    "aliases": ["milk", "milk bucket"]
+  },
+  {
+    "id": 12,
+    "text": "Which enchantment allows you to breathe underwater?",
+    "answer": "Respiration",
+    "aliases": ["respiration"]
+  },
+  {
+    "id": 13,
+    "text": "What is the spawn rate decrease item for hostile mobs?",
+    "answer": "Torch",
+    "aliases": ["torch", "torches"]
+  },
+  {
+    "id": 14,
+    "text": "Which boss drops the Dragon Egg?",
+    "answer": "Ender Dragon",
+    "aliases": ["ender dragon", "enderdragon", "dragon"]
+  },
+  {
+    "id": 15,
+    "text": "What block do you need to create a Beacon base?",
+    "answer": "Iron Block",
+    "aliases": ["iron block", "gold block", "diamond block", "emerald block", "netherite block"]
+  },
+  {
+    "id": 16,
+    "text": "Which wood type burns the longest in a furnace?",
+    "answer": "All wood burns equally",
+    "aliases": ["all wood burns equally", "same", "equal"]
+  },
+  {
+    "id": 17,
+    "text": "What is the name of the trading currency with Villagers?",
+    "answer": "Emerald",
+    "aliases": ["emerald", "emeralds"]
+  },
+  {
+    "id": 18,
+    "text": "Which tool mines stone the fastest?",
+    "answer": "Pickaxe",
+    "aliases": ["pickaxe", "pick"]
+  },
+  {
+    "id": 19,
+    "text": "What is the maximum stack size for most items?",
+    "answer": "64",
+    "aliases": ["64", "sixty four"]
+  },
+  {
+    "id": 20,
+    "text": "Which mob is immune to lava damage?",
+    "answer": "Blaze",
+    "aliases": ["blaze", "blazes", "ghast", "magma cube"]
+  },
+  {
+    "id": 21,
+    "text": "What is the crafting recipe for a bed?",
+    "answer": "3 Wool and 3 Planks",
+    "aliases": ["wool and planks", "3 wool 3 planks", "wool planks"]
+  },
+  {
+    "id": 22,
+    "text": "Which biome has the highest spawn rate for slimes?",
+    "answer": "Swamp",
+    "aliases": ["swamp", "swampland"]
+  },
+  {
+    "id": 23,
+    "text": "What is the name of the final boss in Minecraft?",
+    "answer": "Ender Dragon",
+    "aliases": ["ender dragon", "enderdragon", "dragon"]
+  },
+  {
+    "id": 24,
+    "text": "Which block can only be mined with a Silk Touch pickaxe?",
+    "answer": "Grass Block",
+    "aliases": ["grass block", "grass", "ice", "glass"]
+  },
+  {
+    "id": 25,
+    "text": "What is the maximum height limit in Minecraft?",
+    "answer": "320",
+    "aliases": ["320", "three hundred twenty"]
+  },
+  {
+    "id": 26,
+    "text": "Which potion ingredient grants night vision?",
+    "answer": "Golden Carrot",
+    "aliases": ["golden carrot", "gold carrot"]
+  },
+  {
+    "id": 27,
+    "text": "What tool is needed to harvest cobwebs?",
+    "answer": "Shears",
+    "aliases": ["shears", "sword"]
+  },
+  {
+    "id": 28,
+    "text": "Which enchantment prevents item loss on death?",
+    "answer": "Curse of Binding",
+    "aliases": ["curse of binding", "binding"]
+  },
+  {
+    "id": 29,
+    "text": "What is the rarest ore in Minecraft?",
+    "answer": "Ancient Debris",
+    "aliases": ["ancient debris", "netherite", "netherite ore"]
+  },
+  {
+    "id": 30,
+    "text": "Which mob can teleport?",
+    "answer": "Enderman",
+    "aliases": ["enderman", "endermen", "chorus fruit"]
+  }
+]

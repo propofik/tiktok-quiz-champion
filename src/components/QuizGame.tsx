@@ -159,6 +159,14 @@ export default function QuizGame() {
   const revealAnswer = (percentage: number): string => {
     if (!currentQuestion) return '';
     const answer = currentQuestion.answer;
+    
+    // For short answers, reveal letter by letter
+    if (answer.length <= 5) {
+      const revealLength = Math.ceil(answer.length * (percentage / 100));
+      return answer.substring(0, revealLength) + '•'.repeat(answer.length - revealLength);
+    }
+    
+    // For longer answers, use percentage-based reveal
     const revealLength = Math.ceil(answer.length * (percentage / 100));
     return answer.substring(0, revealLength) + '•'.repeat(answer.length - revealLength);
   };
@@ -327,9 +335,6 @@ export default function QuizGame() {
                   </div>
                 </div>
                 
-                <div className="text-xl minecraft-text">
-                  Question {gameState.questionIndex + 1} / {questions.length}
-                </div>
               </div>
 
               <Card className="p-6 bg-black/30 border-2 border-yellow-400 minecraft-block">

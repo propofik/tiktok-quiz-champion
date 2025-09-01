@@ -127,6 +127,19 @@ export default function QuizGame() {
     setComments([]);
   };
 
+  const stopGame = () => {
+    setGameState({
+      status: 'waiting',
+      questionIndex: 0,
+      timeRemaining: ROUND_DURATION,
+      revealPercentage: 0,
+      currentWinner: null,
+      roundWinner: null,
+    });
+    setPlayers([]);
+    setComments([]);
+  };
+
   const nextRound = () => {
     if (gameState.questionIndex >= questions.length - 1) {
       setGameState(prev => ({ ...prev, status: 'waiting' }));
@@ -193,6 +206,26 @@ export default function QuizGame() {
     setIsAdmin(urlParams.get('admin') === '1');
   }, []);
 
+  // Keyboard controls
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.code === 'Space') {
+        event.preventDefault();
+        if (gameState.status === 'waiting' || gameState.status === 'winner') {
+          startGame();
+        }
+      } else if (event.code === 'Escape') {
+        event.preventDefault();
+        if (gameState.status !== 'waiting') {
+          stopGame();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [gameState.status]);
+
   const topPlayers = [...players].sort((a, b) => b.points - a.points).slice(0, 20);
 
   if (gameState.status === 'winner' && gameState.currentWinner) {
@@ -207,6 +240,9 @@ export default function QuizGame() {
           </div>
           <div className="text-2xl text-white">
             Final Score: {gameState.currentWinner.points} points
+          </div>
+          <div className="text-lg text-white/80 mt-4">
+            Press <kbd className="px-3 py-1 bg-white/20 rounded minecraft-text">SPACE</kbd> to start new game
           </div>
           {isAdmin && (
             <Button onClick={startGame} className="mt-8 minecraft-block">
@@ -250,11 +286,16 @@ export default function QuizGame() {
           <div className="text-center space-y-8">
             <h1 className="text-6xl minecraft-text mb-8">Minecraft Quiz Live</h1>
             <p className="text-2xl">Ready to test your Minecraft knowledge?</p>
-            {isAdmin && (
-              <Button onClick={startGame} size="lg" className="minecraft-block text-2xl px-8 py-4">
-                Start Game
-              </Button>
-            )}
+            <div className="space-y-4">
+              <div className="text-lg text-white/80">
+                Press <kbd className="px-3 py-1 bg-white/20 rounded minecraft-text">SPACE</kbd> to start
+              </div>
+              {isAdmin && (
+                <Button onClick={startGame} size="lg" className="minecraft-block text-2xl px-8 py-4">
+                  Start Game
+                </Button>
+              )}
+            </div>
           </div>
         )}
 
@@ -347,13 +388,20 @@ export default function QuizGame() {
           </div>
         )}
 
+        {/* Keyboard Controls Indicator */}
+        {gameState.status !== 'waiting' && gameState.status !== 'winner' && (
+          <div className="fixed top-4 right-4 text-sm text-white/60">
+            Press <kbd className="px-2 py-1 bg-white/10 rounded text-xs">ESC</kbd> to stop
+          </div>
+        )}
+
         {/* Admin Controls */}
         {isAdmin && gameState.status !== 'waiting' && (
           <div className="fixed bottom-4 right-4 space-x-2">
             <Button variant="secondary" onClick={() => setGameState(prev => ({ ...prev, status: 'leaderboard' }))}>
               Skip
             </Button>
-            <Button variant="destructive" onClick={startGame}>
+            <Button variant="destructive" onClick={stopGame}>
               Reset
             </Button>
           </div>
